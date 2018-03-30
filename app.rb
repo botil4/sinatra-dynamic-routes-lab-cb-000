@@ -26,6 +26,9 @@ class App < Sinatra::Base
     when "add"
       sum = params[:number1].to_i + params[:number2].to_i
       "#{sum}"
+    when "subtract"
+      diff = params[:number1].to_i - params[:number2].to_i
+      "#{diff}"
     end
   end
 
