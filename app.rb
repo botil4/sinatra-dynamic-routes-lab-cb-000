@@ -12,7 +12,7 @@ class App < Sinatra::Base
     "#{square.to_s}"
   end
 
-  get 'say/:number/:phrase' do
+  get '/say/:number/:phrase' do
     phrase = params[:phrase].gsub(/%20/, ' ')
     binding.pry
     params[:number].to_i.times do
