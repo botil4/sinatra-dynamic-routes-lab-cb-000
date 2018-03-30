@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require 'pry'
 
 class App < Sinatra::Base
   # Write your code here!
@@ -14,6 +15,7 @@ class App < Sinatra::Base
 
   get 'say/:number/:phrase' do
     phrase = params[:phrase].gsub(/%20/, ' ')
+    binding.pry
     params[:number].to_i.times do
       "#{phrase}"
     end
